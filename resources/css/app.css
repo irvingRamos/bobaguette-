@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fondo Crema Claro de Figma */
+  --color-bob-fondo: #E7DCC8;
+  
+  /* Verde Oscuro del Botón de Figma */
+  --color-bob-verde: #004225;
+  --color-bob-verde-hover: #005c34;
+}
+
+@layer base {
+  body {
+    /* Aplicamos el fondo y suavizado de fuente */
+    @apply bg-bob-fondo antialiased;
+    
+    /* Declaramos la fuente de forma tradicional para evitar errores de compilación */
+    font-family: 'Instrument Sans', sans-serif;
+  }
+}
+
+/* Rutas de rastreo para Tailwind v4 (Indispensable para que reconozca tus clases en los .blade) */
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../../**/*.blade.php";
+@source "../../**/*.js";
